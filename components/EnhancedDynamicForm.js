@@ -14,6 +14,24 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
   const isBorrowerLevel = dataLevels.some(level => level.includes('BORROWER'));
   const isLoanLevel = dataLevels.some(level => level.includes('LOAN'));
 
+  // Get all questions to find question metadata
+  const getAllQuestions = () => {
+    const allQuestions = [];
+    Object.values(questionnaire).forEach(levels => {
+      Object.values(levels).forEach(groups => {
+        Object.values(groups).forEach(subgroups => {
+          allQuestions.push(...subgroups);
+        });
+      });
+    });
+    return allQuestions;
+  };
+
+  const questionMap = {};
+  getAllQuestions().forEach(q => {
+    questionMap[q.questionCode] = q;
+  });
+
   // Handle single value inputs
   const handleInputChange = (questionCode, value) => {
     setFormData(prev => ({
@@ -252,7 +270,7 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
     );
   };
 
-  // Generate clean JSON output
+  // Generate clean JSON output with nested unit structure
   const generateJsonOutput = () => {
     const output = {
       timestamp: new Date().toISOString(),
@@ -268,7 +286,20 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
 
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== undefined && value !== null && value !== '') {
-        output.responses[key] = value;
+        const question = questionMap[key];
+        
+        // Check if this is a multi-select field
+        if (typeof value === 'object' && !Array.isArray(value) && Object.keys(value).length > 0) {
+          // Multi-select with unit
+          const unit = question?.unit || null;
+          output.responses[key] = {
+            unit: unit,
+            items: value
+          };
+        } else {
+          // Regular single value
+          output.responses[key] = value;
+        }
       }
     });
 
