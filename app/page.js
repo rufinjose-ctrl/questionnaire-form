@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import DynamicForm from '@/components/DynamicForm';
+import EnhancedDynamicForm from '@/components/EnhancedDynamicForm';
 import borrowerQuestionnaire from '@/data/borrower-questions.json';
 import loanQuestionnaire from '@/data/loan-questions.json';
 
@@ -54,14 +54,14 @@ export default function Home() {
         </div>
 
         {activeTab === 'borrower' && (
-          <DynamicForm
+          <EnhancedDynamicForm
             questionnaire={borrowerQuestionnaire}
             title="ESG Questionnaire - Borrower Level"
           />
         )}
 
         {activeTab === 'loan' && (
-          <DynamicForm
+          <EnhancedDynamicForm
             questionnaire={loanQuestionnaire}
             title="Financed Emissions Questionnaire - Loan Level"
           />
