@@ -330,3 +330,37 @@
     width: 100%;
   }
 }
+
+/* Import Button */
+.import-button {
+  padding: 12px 24px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.import-button:hover {
+  background: #2563eb;
+}
+
+/* Update download button styling */
+.download-button {
+  padding: 12px 24px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.download-button:hover {
+  background: #059669;
+}

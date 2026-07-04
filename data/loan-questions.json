@@ -321,7 +321,56 @@
           "subGroupName": null,
           "subGroupType": null,
           "TabBoxHeaderTitle": "The Energy consumed by the Farm for the reporting period for which financed emission calculation is required",
-          "validOptions": "[\"Agricultural Waste\", \"Anthracite Coal\", \"Asphalt\", \"Aviation Gasoline\", \"Bagasse\", \"Bamboo\", \"Biodiesel\", \"Bioethanol\", \"Biogas\", \"Biogasoline\", \"Biomethane\", \"Bitumen\", \"Bituminous Coal\", \"Blast Furnace Gas\", \"Butane\", \"Butylene\", \"Charcoal\", \"Coal\", \"Coke\", \"Coke Oven Gas\", \"Compressed Natural Gas (CNG)\", \"Crude Oil\", \"Crude Oil Extra Heavy\", \"Crude Oil Heavy\", \"Crude Oil Light\", \"Diesel\", \"Distillate Oil\", \"Ethane\", \"Ethylene\", \"Fuel Gas\", \"Fuel Oil Number 1\", \"Fuel Oil Number 2\", \"Fuel Oil Number 4\", \"Fuel Oil Number 5\", \"Fuel Oil Number 6\", \"Gas Oil\", \"General Municipal Waste\", \"Grass\", \"Heavy Gas Oil\", \"Hydrogen\", \"Industrial Wastes\", \"Jet Gasoline\", \"Jet Kerosene\", \"Kerosene\", \"Light Distillate\", \"Lignite Coal\", \"Liquefied Natural Gas (LNG)\", \"Liquified Petroleum Gases (LPG)\", \"Liquid Biofuel\", \"Lubricants\", \"Methane\", \"Motor Gasoline\", \"Natural Gas\", \"Natural Gas Liquids (NGL)\", \"Natural Gasoline\", \"Other Petroleum Gas\", \"Peat\", \"Petrol\", \"Propane Gas\", \"Propane Liquid\", \"Propylene\", \"Town Gas\", \"Wood\", \"Wood Chips\", \"Wood Logs\", \"Wood Pellets\", \"Wood Waste\", \"Coal gas Consumption\", \"Gas/Diesel Oil\", \"Consumption - Energy from renewable source\", \"Consumption - Energy from non-renewable source\", \"Piped Natural Gas (PNG)\"]",
+          "validOptions": {
+            "Anthracite Coal": {
+              "unit": "tonnes",
+              "type": "decimal",
+              "min": 0,
+              "max": 10000
+            },
+            "Bituminous Coal": {
+              "unit": "tonnes",
+              "type": "decimal",
+              "min": 0,
+              "max": 10000
+            },
+            "Asphalt": {
+              "unit": "tonnes",
+              "type": "decimal",
+              "min": 0,
+              "max": 5000
+            },
+            "Aviation Gasoline": {
+              "unit": "liters",
+              "type": "decimal",
+              "min": 0,
+              "max": 50000
+            },
+            "Diesel": {
+              "unit": "liters",
+              "type": "decimal",
+              "min": 0,
+              "max": 100000
+            },
+            "Natural Gas": {
+              "unit": "m\u00b3",
+              "type": "decimal",
+              "min": 0,
+              "max": 1000000
+            },
+            "LPG": {
+              "unit": "kg",
+              "type": "decimal",
+              "min": 0,
+              "max": 50000
+            },
+            "Biogas": {
+              "unit": "m\u00b3",
+              "type": "decimal",
+              "min": 0,
+              "max": 500000
+            }
+          },
           "borrowerTypes": [
             "Agriculture"
           ],
