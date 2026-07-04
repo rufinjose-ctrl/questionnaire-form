@@ -4,7 +4,13 @@ import './DynamicForm.css';
 export default function EnhancedDynamicForm({ questionnaire, title }) {
   const [formData, setFormData] = useState({});
   const [selectedBorrowerType, setSelectedBorrowerType] = useState('all');
+  const [selectedLoanType, setSelectedLoanType] = useState('all');
   const [showJsonOutput, setShowJsonOutput] = useState(false);
+
+  // Determine if this is a borrower or loan level questionnaire
+  const dataLevels = Object.keys(questionnaire);
+  const isBorrowerLevel = dataLevels.some(level => level.includes('BORROWER'));
+  const isLoanLevel = dataLevels.some(level => level.includes('LOAN'));
 
   // Handle single value inputs
   const handleInputChange = (questionCode, value) => {
@@ -49,12 +55,27 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
   };
 
   const isQuestionVisible = (question) => {
-    if (!question.borrowerTypes) return true;
-    if (question.borrowerTypes.includes('all')) return true;
-    return question.borrowerTypes.includes(selectedBorrowerType);
+    if (isBorrowerLevel) {
+      // Filter by borrower type only
+      if (!question.borrowerTypes) return true;
+      if (question.borrowerTypes.includes('all')) return true;
+      return question.borrowerTypes.includes(selectedBorrowerType);
+    } else if (isLoanLevel) {
+      // Filter by BOTH borrower type AND loan type
+      const borrowerMatch = !question.borrowerTypes || 
+                           question.borrowerTypes.includes('all') || 
+                           question.borrowerTypes.includes(selectedBorrowerType);
+      
+      const loanMatch = !question.loanType || 
+                       question.loanType === 'all' || 
+                       question.loanType === selectedLoanType;
+      
+      return borrowerMatch && loanMatch;
+    }
+    return true;
   };
 
-  // Example: Detect multi-select questions (those with validOptions)
+  // Detect multi-select questions (those with validOptions)
   const isMultiSelectQuestion = (question) => {
     return question.validOptions && question.type === 'multiselect';
   };
@@ -196,9 +217,15 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
   const generateJsonOutput = () => {
     const output = {
       timestamp: new Date().toISOString(),
-      borrowerType: selectedBorrowerType,
       responses: {}
     };
+
+    if (isBorrowerLevel) {
+      output.borrowerType = selectedBorrowerType;
+    } else if (isLoanLevel) {
+      output.borrowerType = selectedBorrowerType;
+      output.loanType = selectedLoanType;
+    }
 
     Object.entries(formData).forEach(([key, value]) => {
       if (value !== undefined && value !== null && value !== '') {
@@ -215,23 +242,64 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
     <div className="form-container">
       <h1>{title}</h1>
       
-      {Object.keys(questionnaire).some(level => level.includes('BORROWER')) && (
-        <div className="borrower-selector">
-          <label htmlFor="borrower-type">Select Borrower Type:</label>
-          <select
-            id="borrower-type"
-            value={selectedBorrowerType}
-            onChange={(e) => setSelectedBorrowerType(e.target.value)}
-          >
-            <option value="all">All</option>
-            <option value="Listed">Listed</option>
-            <option value="Unlisted">Unlisted</option>
-            <option value="MSME">MSME</option>
-            <option value="Agriculture">Agriculture</option>
-            <option value="Retail">Retail</option>
-          </select>
-        </div>
-      )}
+      <div className="selector-group">
+        {isBorrowerLevel && (
+          <div className="borrower-selector">
+            <label htmlFor="borrower-type">Select Borrower Type:</label>
+            <select
+              id="borrower-type"
+              value={selectedBorrowerType}
+              onChange={(e) => setSelectedBorrowerType(e.target.value)}
+            >
+              <option value="all">All</option>
+              <option value="Listed">Listed</option>
+              <option value="Unlisted">Unlisted</option>
+              <option value="MSME">MSME</option>
+              <option value="Agriculture">Agriculture</option>
+              <option value="Retail">Retail</option>
+            </select>
+          </div>
+        )}
+
+        {isLoanLevel && (
+          <>
+            <div className="borrower-selector">
+              <label htmlFor="borrower-type">Select Borrower Type:</label>
+              <select
+                id="borrower-type"
+                value={selectedBorrowerType}
+                onChange={(e) => setSelectedBorrowerType(e.target.value)}
+              >
+                <option value="all">All</option>
+                <option value="Listed">Listed</option>
+                <option value="Unlisted">Unlisted</option>
+                <option value="MSME">MSME</option>
+                <option value="Agriculture">Agriculture</option>
+                <option value="Retail">Retail</option>
+              </select>
+            </div>
+
+            <div className="borrower-selector">
+              <label htmlFor="loan-type">Select Loan Type:</label>
+              <select
+                id="loan-type"
+                value={selectedLoanType}
+                onChange={(e) => setSelectedLoanType(e.target.value)}
+              >
+                <option value="all">All</option>
+                <option value="Vehicle Loan">Vehicle Loan</option>
+                <option value="House Loan">House Loan</option>
+                <option value="Personal Loan">Personal Loan</option>
+                <option value="Education Loan">Education Loan</option>
+                <option value="Business Loan">Business Loan</option>
+                <option value="Project Finance">Project Finance</option>
+                <option value="Agriculture Loan">Agriculture Loan</option>
+                <option value="CRE">CRE</option>
+              </select>
+            </div>
+          </>
+        )}
+      </div>
 
       <div className="tabs">
         {Object.keys(questionnaire).map(renderTab)}
