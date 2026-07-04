@@ -311,7 +311,7 @@
         {
           "questionCode": "FE-AGR-007",
           "label": "Total Fuel based consumption listed seperately",
-          "type": "text",
+          "type": "multiselect",
           "required": false,
           "unit": null,
           "placeholder": null,
