@@ -1,0 +1,409 @@
+{
+  "LOAN_LEVEL": {
+    "Loan Identifier": {
+      "default": [
+        {
+          "questionCode": "LOA-01",
+          "label": "Unique loan account number under which the exposure is booked.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Loan Identifier",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-02",
+          "label": "Loan scheme code; used for asset class mapping in FS-001.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Loan Identifier",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-03",
+          "label": "Scheme type of the facility (Term Loan / Cash Credit / Overdraft).",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Loan Identifier",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-04",
+          "label": "IAS CODE",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Loan Identifier",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-05",
+          "label": "The date at which loan is sanctioned",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Loan Identifier",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        }
+      ]
+    },
+    "Bank Details": {
+      "default": [
+        {
+          "questionCode": "LOA-06",
+          "label": "Branch under which the loan account is booked.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Bank Details",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-07",
+          "label": "Regional Office (RO) mapped to the branch.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Bank Details",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-08",
+          "label": "Zonal Office (ZO) mapped to the regional office.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Bank Details",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        }
+      ]
+    },
+    "Financials": {
+      "default": [
+        {
+          "questionCode": "LOA-09",
+          "label": "The Loan Limit Assigned to Brrower for mentioed loan account number.",
+          "type": "decimal",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Financials",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "LOA-10",
+          "label": "The Outstanding amount remained when Financed emission calculation needs to be done",
+          "type": "decimal",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Financials",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Loan Identifier",
+          "borrowerTypes": [
+            "all"
+          ]
+        }
+      ]
+    },
+    "General": {
+      "default": [
+        {
+          "questionCode": "FE-AGR-001",
+          "label": "The total area of the Farm for which loan is availed",
+          "type": "decimal",
+          "required": false,
+          "unit": "Sq Mtr",
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "General",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "General Information Related to Farm",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-002",
+          "label": "Number of Livestock",
+          "type": "integer",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "General",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "General Information Related to Farm",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-003",
+          "label": "Livestock type for which loan is availed",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "General",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "General Information Related to Farm",
+          "validOptions": "[\"cattle\", \"buffalo\", \"sheep\", \"goat\", \"horse\", \"pony\", \"mule\", \"donkey\", \"camel\", \"pig\", \"Total_poultry\"]",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-004",
+          "label": "Main crop grown on the farm.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "General",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "General Information Related to Farm",
+          "validOptions": "[\"AFRICAN SARSON\", \"BAJRA - NAPIER HYBRID\", \"BAJRA NAPIER GRASS\", \"BANANA\", \"BARLEY (JAU)\", \"BARNYARD MILLET (KUNDIRAIVLLI/SAWAN)\", \"BARSEEM\", \"BEANS\", \"BENGAL GRAM (CHANA)\", \"BENGAL GRAM (CHANA) - IR\", \"BENGAL GRAM (CHANA) - RF\", \"BIRDWOOD GRASS\", \"BLACK GRAM (URAD)\", \"BLACK GRAM (URAD) - IR\", \"BLACK GRAM (URAD) - RF\", \"BROWN SARSON\", \"BUCK WHEAT (KASPAT)\", \"BUFFEL GRASS (ANJAN GRASS)\", \"CABBAGE (SUMMER)\", \"CARDAMOM\", \"CASHEW\", \"CASTOR (REHRI, RENDI, ARANDI)\", \"CASTOR (REHRI, RENDI, ARANDI) - RF\", \"CHILLIES\", \"CHILLIES - IR\", \"COMMON MILLET (PANIVARAGU/CHENA/PROSO/HOGM)\", \"COTTON (KAPAS)\", \"COTTON (KAPAS) - IR\", \"COTTON (KAPAS) - RF\", \"COTTON (LINT) - I\", \"COTTON (LINT) - II\", \"COTTON (LINT) - III\", \"COWPEA\", \"Cumin\", \"DHAINCHA\", \"DHARAF GRASS\", \"DINANATH GRASS\", \"FABA BEAN (HORSE BEAN/WINDSOR BEAN)\", \"FINGER MILLET (RAGI) (RABI SUMMER)\", \"FINGER MILLET (RAGI) (RABI WINTER)\", \"FINGERMILLET (RAGI/MANDIKA)\", \"FINGERMILLET (RAGI) - HILLS\", \"FINGERMILLET (RAGI) - IR\", \"FINGERMILLET (RAGI) - RF\", \"FINGERMILLET (RAGI) - SUMMER IR\", \"FODDER MAIZE\", \"FODDER SORGHUM\", \"GINGER - HILLS\", \"GOLDEN THIMOTHY\", \"GREEN GRAM (MOONG)\", \"GREEN GRAM (MOONG) - IR\", \"GREEN GRAM (MOONG) - RF\", \"GROUNDNUT (PEA NUT)\", \"GROUNDNUT (PEA NUT) - IR\", \"GROUNDNUT (PEA NUT) - RF\", \"GROUNDNUT (PEA NUT) - SUMMER\", \"GROUNDNUT (PEA NUT) - SUMMER IR\", \"GROUNDNUT (PEA NUT) - SUMMER RF\", \"GROW BAG\", \"GUAR\", \"GUINEA GRASS\", \"HOMESTEAD FARMING/MIXED CROPPING\", \"HORSE GRAM (KULTHI/KULTHA)\", \"HORSE GRAM (KULTHI/KULTHA) - RF\", \"ITALIAN MILLET (THENAI/FOXTAIL/KANG)\", \"ITALIAN MILLET (THENAI/FOXTAIL/KANG) - RF\", \"ITALIAN MILLET (FOXTAIL)(RABI SUMMER)\", \"ITALIAN MILLET (FOXTAIL)(RABI WINTER)\", \"Isabgol\", \"JOJOBA\", \"JUTE\", \"KARAN RAI\", \"KHESARI (CHICKLING VETCH/GRASS PEA)\", \"KODO MILLET (KODARA/VARAGU)\", \"KOLANCHI (TEPHROSIA PURPUREA)\", \"KORRA\", \"LARGE CARDAMOM\", \"LENTIL (MASUR)\", \"LETHYRUS\", \"LINSEED (ALSI)\", \"LINSEED (ALSI) - RF\", \"LITTLE MILLET (SAMAI/KUTKI/KODO-KUTKI)\", \"LITTLE MILLET (SAMAI)(RABI SUMMER)\", \"LITTLE MILLET (SAMAI)(RABI WINTER)\", \"LUCERNE (ALFALFA)\", \"MAIZE (MAKKA)\", \"MAIZE (MAKKA) - I\", \"MAIZE (MAKKA) - II\", \"MAIZE (MAKKA) - III\", \"MAIZE (MAKKA) - IR\", \"MAIZE (MAKKA) - RABI\", \"MAIZE (MAKKA) - RF\", \"MAIZE (MAKKA) - SUMMER\", \"MARVEL GRASS\", \"MEHANDI/HENNA TREE\", \"MESTA\", \"MOCHAI (LAB-LAB)\", \"MOSAMBI (SWEET ORANGE)\", \"MOTH BEAN (KIDNEY BEAN/DEW GRAM)\", \"MUSTARD\", \"NIGER (RAMTIL)\", \"OATS\", \"OLIVE\", \"OTHER VEGETABLES\", \"PADDY\", \"PADDY (DHAN)\", \"PADDY - AAHU\", \"PADDY - AMAN\", \"PADDY - AUS\", \"PADDY - AUTUMN\", \"PADDY - BORO\", \"PADDY - HILLS\", \"PADDY - I\", \"PADDY - II\", \"PADDY - III\", \"PADDY - IR\", \"PADDY - RF (UNIR)\", \"PADDY - SALI\", \"PADDY - SUMMER\", \"PADDY - SUMMER IR\", \"PADDY HIGH YIELDING VARIETY\", \"PADDY(LOCAL)\", \"PEA\", \"PEARL MILLET (BAJRA)\", \"PEARL MILLET (BAJRA) - IR\", \"PEARL MILLET (BAJRA) - RF\", \"PEAS (FIELD/GARDEN/MATAR)\", \"PERSIAN CLOVER\", \"PIGEON PEA (RED GRAM/ARHAR/TUR)\", \"PIGEON PEA (ARHAR/TUR) - IR\", \"PIGEON PEA (ARHAR/TUR) - RF\", \"PILLIPESARA\", \"POTATO\", \"POTATO (SUMMER)\", \"POTATO - II\", \"PULSES\", \"Potato - IR\", \"RAJKA BAJRI\", \"RAJMA (FRENCH BEAN)\", \"RAJMASH BEAN\", \"RAYA (INDIAN MUSTARD)\", \"RED CHILLIES\", \"RED CHILLIES - IR\", \"RED CHILLIES - RF\", \"RED CLOVER\", \"RICE\", \"RICE FALLOW BLACK GRAM\", \"RICE FALLOW COTTON\", \"RICE FALLOW COW PEA\", \"RICE FALLOW GINGELLY\", \"RICE FALLOW GREEN GRAM\", \"RICE FALLOW RED GRAM\", \"RICEBEAN\", \"ROCKET SALAD (TARAMIRA)\", \"ROSELLE (MESTA)\", \"RYEGRASS\", \"SAFFLOWER (KUSUM/KARDI)\", \"SAFFLOWER (KUSUM/KARDI) - RF\", \"SAVE - IR\", \"SAVE - RF\", \"SEN GRASS\", \"SESAME (GINGELLY/TIL)\", \"SESAME (GINGELLY/TIL) - RF\", \"SETARIA GRASS\", \"SORGHUM (JOWAR/GREAT MILLET)\", \"SORGHUM (JOWAR) - IR\", \"SORGHUM (JOWAR) - RF\", \"SORGHUM (JOWAR)(RABI SUMMER)\", \"SORGHUM (JOWAR)(RABI WINTER)\", \"SOYBEAN (BHAT)\", \"SOYBEAN (BHAT) - IR\", \"SOYBEAN (BHAT) - RF\", \"STYLOSANTHES\", \"SUDAN GRASS\", \"SUGARCANE\", \"SUGARCANE - ADSALI\", \"SUGARCANE - NOBLE CANE\", \"SUGARCANE - PRE-SEASONAL\", \"SUGARCANE - RATOON\", \"SUGARCANE - SEASONAL/SURU/PLANT\", \"SUNFLOWER (SURYAMUKHI)\", \"SUNFLOWER (SURYAMUKHI) - IR\", \"SUNFLOWER (SURYAMUKHI) - RF\", \"SUNFLOWER (SURYAMUKHI) - SUMMER IR\", \"SUNNHEMP (PATUA)\", \"TALL FESCUE GRASS\", \"TEOSINTE\", \"THYSANOLAENA (BROOM PLANT/GRASS)\", \"TOBACCO\", \"TORIA\", \"TRITICALE\", \"TURMERIC\", \"VELIMASAL\", \"WHEAT\", \"WHEAT - HILLS\", \"WHEAT - IR\", \"WHEAT - RF\", \"WHITE CLOVER (SHAFTAL)\", \"WINGED BEAN\", \"ANTHURIUM\", \"INDIAN CLOVER (SENJI/SWEET CLOVER)\", \"POTATO (WINTER)\", \"Mushroom\", \"PADDY (DHAN) / PADDY\", \"Pepper\"]",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        }
+      ]
+    },
+    "Energy Consumption": {
+      "default": [
+        {
+          "questionCode": "FE-AGR-005",
+          "label": "Total Annual Energy Consumption",
+          "type": "decimal",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Energy Consumption",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "The Energy consumed by the Farm for the reporting period for which financed emission calculation is required",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-006",
+          "label": "Total Annual Electricity Consumed",
+          "type": "decimal",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Energy Consumption",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "The Energy consumed by the Farm for the reporting period for which financed emission calculation is required",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-007",
+          "label": "Total Fuel based consumption listed seperately",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Energy Consumption",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "The Energy consumed by the Farm for the reporting period for which financed emission calculation is required",
+          "validOptions": "[\"Agricultural Waste\", \"Anthracite Coal\", \"Asphalt\", \"Aviation Gasoline\", \"Bagasse\", \"Bamboo\", \"Biodiesel\", \"Bioethanol\", \"Biogas\", \"Biogasoline\", \"Biomethane\", \"Bitumen\", \"Bituminous Coal\", \"Blast Furnace Gas\", \"Butane\", \"Butylene\", \"Charcoal\", \"Coal\", \"Coke\", \"Coke Oven Gas\", \"Compressed Natural Gas (CNG)\", \"Crude Oil\", \"Crude Oil Extra Heavy\", \"Crude Oil Heavy\", \"Crude Oil Light\", \"Diesel\", \"Distillate Oil\", \"Ethane\", \"Ethylene\", \"Fuel Gas\", \"Fuel Oil Number 1\", \"Fuel Oil Number 2\", \"Fuel Oil Number 4\", \"Fuel Oil Number 5\", \"Fuel Oil Number 6\", \"Gas Oil\", \"General Municipal Waste\", \"Grass\", \"Heavy Gas Oil\", \"Hydrogen\", \"Industrial Wastes\", \"Jet Gasoline\", \"Jet Kerosene\", \"Kerosene\", \"Light Distillate\", \"Lignite Coal\", \"Liquefied Natural Gas (LNG)\", \"Liquified Petroleum Gases (LPG)\", \"Liquid Biofuel\", \"Lubricants\", \"Methane\", \"Motor Gasoline\", \"Natural Gas\", \"Natural Gas Liquids (NGL)\", \"Natural Gasoline\", \"Other Petroleum Gas\", \"Peat\", \"Petrol\", \"Propane Gas\", \"Propane Liquid\", \"Propylene\", \"Town Gas\", \"Wood\", \"Wood Chips\", \"Wood Logs\", \"Wood Pellets\", \"Wood Waste\", \"Coal gas Consumption\", \"Gas/Diesel Oil\", \"Consumption - Energy from renewable source\", \"Consumption - Energy from non-renewable source\", \"Piped Natural Gas (PNG)\"]",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        }
+      ]
+    },
+    "Emission Data": {
+      "default": [
+        {
+          "questionCode": "FE-AGR-008",
+          "label": "Annual Scope 1 Emission. ",
+          "type": "decimal",
+          "required": false,
+          "unit": "MTCO2e",
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Emission Data",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Information related to GHG Emission",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-009",
+          "label": "Annual Scope 2 Emission.",
+          "type": "decimal",
+          "required": false,
+          "unit": "MTCO2e",
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Emission Data",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Information related to GHG Emission",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-010",
+          "label": "Scope 1 Emission Verified",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Emission Data",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Information related to GHG Emission",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        },
+        {
+          "questionCode": "FE-AGR-011",
+          "label": "Scope 2 Emission Verified",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Emission Data",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Information related to GHG Emission",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        }
+      ]
+    },
+    "Financial": {
+      "default": [
+        {
+          "questionCode": "FE-AGR-012",
+          "label": "Livetsock Value at the time of loan origination",
+          "type": "decimal",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "LOAN_LEVEL",
+          "groupName": "Financial",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Financial Related Information",
+          "borrowerTypes": [
+            "Agriculture"
+          ]
+        }
+      ]
+    }
+  }
+}

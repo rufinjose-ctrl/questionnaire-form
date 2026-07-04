@@ -1,0 +1,696 @@
+{
+  "BORROWER_LEVEL": {
+    "Borrower Identifiers": {
+      "default": [
+        {
+          "questionCode": "BOR-001",
+          "label": "Unique borrower / customer identification code (CIF)",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "BOR-002",
+          "label": "Name of the borrower / customer",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "BOR-003",
+          "label": "The financial year you are reporting data for.",
+          "type": "integer",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "validOptions": "[\"FY2023-24\", \"FY2024-25\", \"FY2025-26\"]",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "BOR-004",
+          "label": "Your company PAN.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "BOR-005",
+          "label": "Your Corporate Identification Number (CIN).",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        },
+        {
+          "questionCode": "BOR-006",
+          "label": "The main industry / sector your business operates in.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "all"
+          ]
+        },
+        {
+          "questionCode": "BOR-007",
+          "label": "Your specific sub-sector / main business activity.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "BORROWER_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "Borrower Identifiers",
+          "borrowerTypes": [
+            "all"
+          ]
+        }
+      ]
+    }
+  },
+  "SUSTAINABILITY_LEVEL": {
+    "Borrower Identifiers": {
+      "default": [
+        {
+          "questionCode": "BOR-008",
+          "label": "Your company type.",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Company Profile",
+          "validOptions": "[\"Listed Corporate\", \"Unlisted Corporate\", \"MSME / SME\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "BOR-009",
+          "label": "ISIN code of your listed securities.",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "Borrower Identifiers",
+          "groupType": "Box",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Company Profile",
+          "borrowerTypes": [
+            "Listed"
+          ]
+        }
+      ]
+    },
+    "ESG - Emissions": {
+      "default": [
+        {
+          "questionCode": "ESG-001",
+          "label": "Your total Scope 1 (direct) greenhouse gas emissions for the year.",
+          "type": "decimal",
+          "required": false,
+          "unit": "MTCO2e",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Emissions",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Emissions",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-002",
+          "label": "Have your Scope 1 emissions been verified by an independent third party?",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Emissions",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Emissions",
+          "validOptions": "[\"Yes\", \"No\", \"Not Available\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-003",
+          "label": "Your total Scope 2 (purchased electricity) emissions for the year.",
+          "type": "decimal",
+          "required": false,
+          "unit": "MTCO2e",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Emissions",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Emissions",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-004",
+          "label": "Have your Scope 2 emissions been verified by an independent third party?",
+          "type": "text",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Emissions",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Emissions",
+          "validOptions": "[\"Yes\", \"No\", \"Not Available\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-005",
+          "label": "Your total Scope 3 (value chain) emissions for the year, if available.",
+          "type": "decimal",
+          "required": false,
+          "unit": "MTCO2e",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Emissions",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Emissions",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        }
+      ]
+    },
+    "ESG - Decarbonisation": {
+      "default": [
+        {
+          "questionCode": "ESG-006",
+          "label": "Do you have a greenhouse gas emission reduction target?",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Decarbonisation",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Decarbonisation",
+          "validOptions": "[\"Yes\", \"No\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        },
+        {
+          "questionCode": "ESG-007",
+          "label": "If yes, what is your emission reduction target?",
+          "type": "conditional",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Decarbonisation",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Decarbonisation",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        },
+        {
+          "questionCode": "ESG-008",
+          "label": "Year by which you aim to reach Net Zero emissions.",
+          "type": "integer",
+          "required": false,
+          "unit": null,
+          "placeholder": "xxxx",
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Decarbonisation",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Decarbonisation",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        },
+        {
+          "questionCode": "ESG-009",
+          "label": "Are your targets validated by the Science Based Targets initiative (SBTi)?",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Decarbonisation",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Decarbonisation",
+          "validOptions": "[\"Committed\", \"Validated\", \"In Progress\", \"Not Committed\", \"Not Applicable\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        }
+      ]
+    },
+    "ESG - Energy": {
+      "default": [
+        {
+          "questionCode": "ESG-010",
+          "label": "Your total energy consumption for the year.",
+          "type": "decimal",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Energy",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Energy",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-011",
+          "label": "How much of your energy came from renewable sources (solar, wind, biomass, etc.)?",
+          "type": "decimal",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Energy",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Energy",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-012",
+          "label": "Total electricity purchased from the grid / suppliers.",
+          "type": "decimal",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Energy",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Energy",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-013",
+          "label": "Energy used by fuel type in your direct operations.",
+          "type": "text",
+          "required": false,
+          "unit": "mWh",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Energy",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Energy",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        }
+      ]
+    },
+    "ESG - Air & Water": {
+      "default": [
+        {
+          "questionCode": "ESG-014",
+          "label": "Air pollutant emissions (PM, NOx, SOx, VOC), if measured.",
+          "type": "decimal",
+          "required": false,
+          "unit": "Tonne",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Air & Water",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Air & Water",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-015",
+          "label": "Total water withdrawn from all sources during the year.",
+          "type": "decimal",
+          "required": false,
+          "unit": "mCube",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Air & Water",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Air & Water",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-016",
+          "label": "Total water discharged back to the environment.",
+          "type": "decimal",
+          "required": false,
+          "unit": "mCube",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Air & Water",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Air & Water",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        }
+      ]
+    },
+    "ESG - Waste": {
+      "default": [
+        {
+          "questionCode": "ESG-017",
+          "label": "Total waste generated (hazardous + non-hazardous) during the year.",
+          "type": "decimal",
+          "required": false,
+          "unit": "Tonne",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Waste",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Waste",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-018",
+          "label": "How much of this waste was recovered or recycled?",
+          "type": "decimal",
+          "required": false,
+          "unit": "Tonne",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Waste",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Waste",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        }
+      ]
+    },
+    "ESG - Social": {
+      "default": [
+        {
+          "questionCode": "ESG-019",
+          "label": "Gender pay ratio (female pay \u00f7 male pay) for your workforce.",
+          "type": "decimal",
+          "required": false,
+          "unit": "Ratio",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Social",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Social",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-020",
+          "label": "Workplace safety: fatalities and injuries per million hours worked (Fatality rate, LTIFR, TRIR).",
+          "type": "integer",
+          "required": false,
+          "unit": "Cases per Million Hours",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Social",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Social",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-021",
+          "label": "Percentage of women in your total workforce.",
+          "type": "decimal",
+          "required": false,
+          "unit": "%",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Social",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Social",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-022",
+          "label": "Percentage of facilities audited for child labour and sexual harassment (POSH) compliance.",
+          "type": "decimal",
+          "required": false,
+          "unit": "%",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Social",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Social",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        }
+      ]
+    },
+    "ESG - Governance": {
+      "default": [
+        {
+          "questionCode": "ESG-023",
+          "label": "Percentage of women on your Board of Directors.",
+          "type": "decimal",
+          "required": false,
+          "unit": "%",
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Governance",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Governance",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-024",
+          "label": "Do you have a cybersecurity & data privacy policy?",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Governance",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Governance",
+          "validOptions": "[\"Yes\", \"No\", \"Not Applicable\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted",
+            "MSME"
+          ]
+        },
+        {
+          "questionCode": "ESG-025",
+          "label": "Do you have an anti-corruption & anti-bribery policy?",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Governance",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Governance",
+          "validOptions": "[\"Yes\", \"No\", \"Not Applicable\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        },
+        {
+          "questionCode": "ESG-026",
+          "label": "Have your environmental metrics been independently assured by a third party?",
+          "type": "dropdown",
+          "required": false,
+          "unit": null,
+          "placeholder": null,
+          "dataLevel": "SUSTAINABILITY_LEVEL",
+          "groupName": "ESG - Governance",
+          "groupType": "Tab",
+          "subGroupName": null,
+          "subGroupType": null,
+          "TabBoxHeaderTitle": "ESG - Governance",
+          "validOptions": "[\"Yes\", \"No\", \"Not Applicable\"]",
+          "borrowerTypes": [
+            "Listed",
+            "Unlisted"
+          ]
+        }
+      ]
+    }
+  }
+}
