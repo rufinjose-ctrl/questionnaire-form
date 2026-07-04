@@ -144,3 +144,189 @@
     width: 100%;
   }
 }
+
+/* Dynamic Multi-select Field */
+.multiselect-field-dynamic {
+  margin: 20px 0;
+}
+
+.multiselect-add-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.multiselect-dropdown {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  background: white;
+  cursor: pointer;
+}
+
+.multiselect-dropdown:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.add-button {
+  padding: 10px 20px;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.add-button:hover:not(:disabled) {
+  background: #059669;
+}
+
+.add-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Selected items container */
+.multiselect-items-container {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.multiselect-item-dynamic {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  background: white;
+}
+
+.multiselect-item-dynamic:last-child {
+  border-bottom: none;
+}
+
+.item-label {
+  font-weight: 600;
+  color: #333;
+  min-width: 150px;
+  flex-shrink: 0;
+}
+
+.item-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.item-input input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+.item-input input:focus {
+  outline: none;
+  border-color: #0070f3;
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+.item-input .unit {
+  font-size: 12px;
+  color: #666;
+  white-space: nowrap;
+  min-width: 60px;
+}
+
+.remove-button {
+  padding: 6px 12px;
+  background: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.2s;
+  flex-shrink: 0;
+}
+
+.remove-button:hover {
+  background: #dc2626;
+}
+
+/* Empty state */
+.empty-state {
+  padding: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 14px;
+  background: #fafafa;
+  border: 1px dashed #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.selector-group {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+/* Responsive adjustments for dynamic multi-select */
+@media (max-width: 768px) {
+  .multiselect-add-section {
+    flex-direction: column;
+  }
+
+  .multiselect-dropdown {
+    min-width: 100%;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .multiselect-item-dynamic {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .item-label {
+    width: 100%;
+  }
+
+  .item-input {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .remove-button {
+    width: 100%;
+  }
+
+  .selector-group {
+    flex-direction: column;
+  }
+
+  .borrower-selector {
+    width: 100%;
+  }
+}

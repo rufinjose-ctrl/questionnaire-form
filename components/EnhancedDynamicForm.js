@@ -6,6 +6,8 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
   const [selectedBorrowerType, setSelectedBorrowerType] = useState('all');
   const [selectedLoanType, setSelectedLoanType] = useState('all');
   const [showJsonOutput, setShowJsonOutput] = useState(false);
+  // Track selected options for each multi-select question
+  const [multiSelectState, setMultiSelectState] = useState({});
 
   // Determine if this is a borrower or loan level questionnaire
   const dataLevels = Object.keys(questionnaire);
@@ -20,37 +22,46 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
     }));
   };
 
-  // Handle multi-select field inputs
-  const handleMultiSelectChange = (questionCode, selectKey, value) => {
+  // Handle multi-select value input
+  const handleMultiSelectValueChange = (questionCode, option, value) => {
     setFormData(prev => ({
       ...prev,
       [questionCode]: {
         ...(prev[questionCode] || {}),
-        [selectKey]: value
+        [option]: value
       }
     }));
   };
 
-  // Handle checkbox for multi-select options
-  const handleMultiSelectCheckbox = (questionCode, selectKey, isChecked) => {
-    setFormData(prev => {
-      const current = prev[questionCode] || {};
-      if (isChecked) {
-        return {
-          ...prev,
-          [questionCode]: {
-            ...current,
-            [selectKey]: current[selectKey] || ''
-          }
-        };
-      } else {
-        const updated = { ...current };
-        delete updated[selectKey];
-        return {
-          ...prev,
-          [questionCode]: Object.keys(updated).length > 0 ? updated : undefined
-        };
+  // Add a new option row for multi-select
+  const handleAddMultiSelectOption = (questionCode, option) => {
+    if (!option) return;
+    
+    // Add to form data
+    setFormData(prev => ({
+      ...prev,
+      [questionCode]: {
+        ...(prev[questionCode] || {}),
+        [option]: ''
       }
+    }));
+
+    // Clear the dropdown
+    setMultiSelectState(prev => ({
+      ...prev,
+      [questionCode]: ''
+    }));
+  };
+
+  // Remove an option row for multi-select
+  const handleRemoveMultiSelectOption = (questionCode, option) => {
+    setFormData(prev => {
+      const updated = { ...prev[questionCode] };
+      delete updated[option];
+      return {
+        ...prev,
+        [questionCode]: Object.keys(updated).length > 0 ? updated : undefined
+      };
     });
   };
 
@@ -104,11 +115,11 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
     );
   };
 
-  // Render multi-select field (like Fuel Types)
+  // Render multi-select field with dynamic add/remove
   const renderMultiSelectField = (question) => {
     if (!isQuestionVisible(question)) return null;
 
-    // Parse validOptions - could be JSON string or array
+    // Parse validOptions
     let options = [];
     try {
       if (typeof question.validOptions === 'string') {
@@ -121,44 +132,72 @@ export default function EnhancedDynamicForm({ questionnaire, title }) {
     }
 
     const selectedData = formData[question.questionCode] || {};
+    const selectedOptions = Object.keys(selectedData);
+    const availableOptions = options.filter(opt => !selectedOptions.includes(opt));
+    const currentDropdownValue = multiSelectState[question.questionCode] || '';
 
     return (
-      <div key={question.questionCode} className="form-field multiselect-field">
+      <div key={question.questionCode} className="form-field multiselect-field-dynamic">
         <label>{question.label}</label>
         {question.required && <span className="required">*</span>}
         
-        <div className="multiselect-container">
-          {options.map((option) => (
-            <div key={option} className="multiselect-item">
-              <input
-                type="checkbox"
-                id={`${question.questionCode}-${option}`}
-                checked={option in selectedData}
-                onChange={(e) =>
-                  handleMultiSelectCheckbox(question.questionCode, option, e.target.checked)
-                }
-              />
-              <label htmlFor={`${question.questionCode}-${option}`} className="checkbox-label">
-                {option}
-              </label>
-              
-              {option in selectedData && (
-                <div className="multiselect-value-input">
+        {/* Add new option section */}
+        <div className="multiselect-add-section">
+          <select
+            value={currentDropdownValue}
+            onChange={(e) => setMultiSelectState(prev => ({
+              ...prev,
+              [question.questionCode]: e.target.value
+            }))}
+            className="multiselect-dropdown"
+          >
+            <option value="">Select {question.label.toLowerCase()} to add...</option>
+            {availableOptions.map(option => (
+              <option key={option} value={option}>{option}</option>
+            ))}
+          </select>
+          <button
+            className="add-button"
+            onClick={() => handleAddMultiSelectOption(question.questionCode, currentDropdownValue)}
+            disabled={!currentDropdownValue}
+          >
+            + Add
+          </button>
+        </div>
+
+        {/* Selected items with value inputs */}
+        {selectedOptions.length > 0 && (
+          <div className="multiselect-items-container">
+            {selectedOptions.map(option => (
+              <div key={option} className="multiselect-item-dynamic">
+                <div className="item-label">{option}</div>
+                <div className="item-input">
                   <input
                     type="number"
                     placeholder="Value"
                     value={selectedData[option]}
-                    onChange={(e) =>
-                      handleMultiSelectChange(question.questionCode, option, e.target.value)
-                    }
+                    onChange={(e) => handleMultiSelectValueChange(question.questionCode, option, e.target.value)}
                     step="0.01"
                   />
                   {question.unit && <span className="unit">{question.unit}</span>}
                 </div>
-              )}
-            </div>
-          ))}
-        </div>
+                <button
+                  className="remove-button"
+                  onClick={() => handleRemoveMultiSelectOption(question.questionCode, option)}
+                  title="Remove this item"
+                >
+                  ✕
+                </button>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {selectedOptions.length === 0 && (
+          <div className="empty-state">
+            No items added yet. Select an option above to add.
+          </div>
+        )}
       </div>
     );
   };
